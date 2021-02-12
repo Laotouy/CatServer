@@ -40,7 +40,6 @@ public class CatServerConfig {
     public boolean disableFMLStatusModInfo = false;
     public boolean disableAsyncCatchWarn = false;
     public boolean versionCheck = true;
-    public boolean enchantmentAcceptingNew = false;
 
     public CatServerConfig(String file) {
         this.configFile = new File(file);
@@ -78,7 +77,6 @@ public class CatServerConfig {
         disableFMLStatusModInfo = getOrWriteBooleanConfig("disableFMLStatusModInfo", disableFMLStatusModInfo);
         disableAsyncCatchWarn = getOrWriteBooleanConfig("disableAsyncCatchWarn", disableAsyncCatchWarn);
         versionCheck = getOrWriteBooleanConfig("versionCheck", versionCheck);
-        enchantmentAcceptingNew = getOrWriteBooleanConfig("enchantmentAcceptingNew", enchantmentAcceptingNew);
 
         // save config
         try {

@@ -389,7 +389,10 @@ public final class CraftServer implements Server {
         if (type == PluginLoadOrder.POSTWORLD) {
             // Spigot start - Allow vanilla commands to be forced to be the main command
             setVanillaCommands(true);
-            commandMap.setFallbackCommands();
+            /*
+                删除 Help 命令
+             */
+          //  commandMap.setFallbackCommands();
             this.setVanillaCommands(false);
             // Spigot end
             commandMap.registerServerAliases();

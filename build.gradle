@@ -35,11 +35,11 @@ repositories {
     clear()
     maven {
         name = "forge"
-        url = "http://files.minecraftforge.net/maven"
+        url = "http://lss233.littleservice.cn/repositories/minecraft/"
     }
     maven {
         name = 'minecraft'
-        url = 'https://libraries.minecraft.net/'
+        url = 'http://lss233.littleservice.cn/repositories/minecraft/'
     }
     maven {
         name = 'spigotmc-public'

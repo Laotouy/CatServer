@@ -96,7 +96,9 @@ public class BukkitInjector {
         for (Object enchantment : Enchantment.REGISTRY) {
             org.bukkit.enchantments.Enchantment.registerEnchantment(new org.bukkit.craftbukkit.enchantments.CraftEnchantment((Enchantment) enchantment));
         }
-        org.bukkit.enchantments.Enchantment.stopAcceptingRegistrations();
+        if (!CatServer.getConfig().enchantmentAcceptingNew){
+            org.bukkit.enchantments.Enchantment.stopAcceptingRegistrations();
+        }
     }
 
     public static void registerPotions() {

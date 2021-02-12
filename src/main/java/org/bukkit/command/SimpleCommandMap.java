@@ -33,7 +33,10 @@ public class SimpleCommandMap implements CommandMap {
     private void setDefaultCommands() {
         register("bukkit", new VersionCommand("version"));
         // register("bukkit", new ReloadCommand("reload"));
-        register("bukkit", new PluginsCommand("plugins"));
+        /*
+            删除plugins 命令
+         */
+      //  register("bukkit", new PluginsCommand("plugins"));
         register("bukkit", new TimingsCommand("timings"));
         register("catserver", new CommandPlugin("plugin"));
         register("catserver", new CommandCatserver("catserver"));
@@ -41,7 +44,7 @@ public class SimpleCommandMap implements CommandMap {
     }
 
     public void setFallbackCommands() {
-        register("bukkit", new HelpCommand());
+     //   register("bukkit", new HelpCommand());
     }
 
     /**

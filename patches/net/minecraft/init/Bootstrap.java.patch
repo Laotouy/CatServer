@@ -578,3 +578,11 @@
                  this.successful = world.mayPlace(block, blockpos, false, EnumFacing.DOWN, (Entity)null);
  
                  if (this.successful)
+@@ -626,6 +957,7 @@
+                     IBlockState iblockstate = block.getDefaultState().withProperty(BlockShulkerBox.FACING, enumfacing1);
+                     world.setBlockState(blockpos, iblockstate);
+                     TileEntity tileentity = world.getTileEntity(blockpos);
++                    if (tileentity == null) return stack; // CatServer - fix mojang bug
+                     ItemStack itemstack = stack.splitStack(1);
+ 
+                     if (itemstack.hasTagCompound())
